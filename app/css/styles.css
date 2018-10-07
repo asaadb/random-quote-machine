@@ -1,5 +1,63 @@
-.testing {
-  width: 71.42857%; }
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+html,
 body {
-  background: blue; }
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: blue; }
+
+.main-container {
+  width: 90%;
+  margin: 0 auto; }
+  .main-container .heading-container {
+    text-align: center; }
+  .main-container .quote-container {
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem; }
+    .main-container .quote-container .quote-box {
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      width: 100%;
+      padding: 1rem; }
+      .main-container .quote-container .quote-box p {
+        text-align: center;
+        width: 100%;
+        padding: 0; }
+      .main-container .quote-container .quote-box span {
+        text-align: right;
+        width: 100%; }
+    .main-container .quote-container .buttons-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row;
+              flex-flow: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+      .main-container .quote-container .buttons-container .newQuote {
+        width: 8rem;
+        padding: 1rem; }
+
+#twitter i {
+  font-size: 5rem;
+  color: yellow; }

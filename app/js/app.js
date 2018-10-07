@@ -17,10 +17,10 @@
     const data = JSON.parse(this.responseText);
 
     if (data && data[0]) {
-      htmlContent = `${data[0].content}<span class="author">${data[0].title}</span>`;
+      htmlContent = `${data[0].content}<span id="author">${data[0].title}</span>`;
 
     } else {
-      htmlContent = '<div class="error-no-image">No images available</div>';
+      htmlContent = '<p class="error-no-image">No images available</p>';
     }
     quoteBox.insertAdjacentHTML('afterbegin', htmlContent);
   }
@@ -35,6 +35,15 @@
     quoteBox.removeChild(quoteBox.firstChild);
     }
     requestQuote();
+    //get tweet button and add an event listener
+    const tweetButton = document.getElementById('tweet');
+    tweetButton.addEventListener('click', quoteTweet);
+    //get the quote and tweet it
+     function quoteTweet(){
+       const twQuote = document.querySelector(".quote-box p").textContent;
+       const twAuthor = document.getElementById("author").textContent;
+       window.open(`https://twitter.com/intent/tweet?text="${twQuote}" ${twAuthor}&hashtags=Inspiring`);
+    }
   });
 
 })();

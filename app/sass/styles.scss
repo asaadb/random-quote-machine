@@ -4,6 +4,7 @@ $main-font: 'Montserrat', sans-serif;
 $quote-font-size: 1.3rem;
 $author-font-size: 0.8rem;
 $author-font-weight: 400;
+$font-color: black;
 
 
 html {
@@ -27,9 +28,12 @@ body {
 
     //text-align: center;
 }
+h1{
+  margin-bottom: 2rem;
+}
 
 .main-container{
-
+  color: $font-color;
   width:90%;
   margin:0 auto;
   .heading-container {
@@ -37,7 +41,7 @@ body {
   }
   .quote-container{
     width:100%;
-    background:white;
+    background:#f5f5f5;
     padding:1rem;
     border-radius:0.5rem;
     .quote-box{
@@ -64,9 +68,21 @@ body {
       display: flex;
       flex-flow: row;
       justify-content: space-around;
+      align-items: center;
       .newQuote {
-        width:8rem;
+        width:9rem;
         padding:1rem;
+        height:4rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        border-style: none;
+        color:$font-color;
+      }
+      #tweet {
+        i {
+          font-size: 4rem;
+        }
       }
     }
   }
@@ -75,6 +91,5 @@ body {
 #twitter {
   i {
     font-size:5rem;
-    color:yellow;
   }
 }

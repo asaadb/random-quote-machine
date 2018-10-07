@@ -1,4 +1,10 @@
-$main-font: 'Lobster Two', cursive;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500');
+
+$main-font: 'Montserrat', sans-serif;
+$quote-font-size: 1.3rem;
+$author-font-size: 0.8rem;
+$author-font-weight: 400;
+
 
 html {
     box-sizing: border-box;
@@ -17,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: blue;
+    font-family: $main-font;
 
     //text-align: center;
 }
@@ -38,17 +45,19 @@ body {
       display:flex;
       flex-flow: column wrap;
       width:100%;
-      padding:1rem;;
+      padding:1rem;
+      line-height: 1.5rem;
+      font-size:$quote-font-size;
       p{
-        font-family: $main-font;
         text-align: center;
         width:100%;
         padding:0;
-        line-height: 1rem;
       }
       span {
         text-align: right;
         width:100%;
+        font-size: $author-font-size;
+        font-weight:$author-font-weight;
       }
     }
     .buttons-container{
@@ -58,16 +67,11 @@ body {
       .newQuote {
         width:8rem;
         padding:1rem;
-        {
-          i {
-            width:2rem;
-            font-size:3rem;
-          }
-        }
-      }
       }
     }
+  }
 }
+
 #twitter {
   i {
     font-size:5rem;

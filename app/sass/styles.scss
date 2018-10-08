@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500');
 
 $main-font: 'Montserrat', sans-serif;
-$quote-font-size: 1.3rem;
-$author-font-size: 0.8rem;
+$header-color: #f5f5f5;
+$descrip-font-size: 1rem;
+$header-font-size: 2rem;
+$quote-font-size: 1.5rem;
+$author-font-size: 1rem;
 $author-font-weight: 400;
 $font-color: black;
-
+$buttons-color: #0250c5;
+$background-img: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 
 html {
     box-sizing: border-box;
@@ -23,23 +27,29 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: blue;
     font-family: $main-font;
+    background-image: $background-img;
 
     //text-align: center;
-}
-h1{
-  margin-bottom: 2rem;
 }
 
 .main-container{
   color: $font-color;
   width:90%;
-  max-width:650px;
+  max-width:700px;
   margin:0 auto;
   .heading-container {
     text-align: center;
     margin:3rem 0;
+    .header{
+      margin-bottom: 2rem;
+      font-size: $header-font-size;
+      color:$header-color;
+    }
+    p {
+      font-size:$descrip-font-size;
+      color:$header-color;
+    }
   }
   .quote-container{
     width:100%;
@@ -79,19 +89,15 @@ h1{
         text-align: center;
         border-radius: 0.5rem;
         border-style: none;
-        color:$font-color;
+        color:#f5f5f5;
+        background: $buttons-color;
       }
       #tweet {
         i {
           font-size: 4rem;
+          color: $buttons-color;
         }
       }
     }
-  }
-}
-
-#twitter {
-  i {
-    font-size:5rem;
   }
 }

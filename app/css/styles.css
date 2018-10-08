@@ -15,20 +15,25 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: blue;
-  font-family: "Montserrat", sans-serif; }
-
-h1 {
-  margin-bottom: 2rem; }
+  font-family: "Montserrat", sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0250c5), to(#d43f8d));
+  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%); }
 
 .main-container {
   color: black;
   width: 90%;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto; }
   .main-container .heading-container {
     text-align: center;
     margin: 3rem 0; }
+    .main-container .heading-container .header {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #f5f5f5; }
+    .main-container .heading-container p {
+      font-size: 1rem;
+      color: #f5f5f5; }
   .main-container .quote-container {
     width: 100%;
     background: #f5f5f5;
@@ -46,7 +51,7 @@ h1 {
       width: 100%;
       padding: 1rem;
       line-height: 1.5rem;
-      font-size: 1.3rem; }
+      font-size: 1.5rem; }
       .main-container .quote-container .quote-box p {
         text-align: center;
         width: 100%;
@@ -54,7 +59,7 @@ h1 {
       .main-container .quote-container .quote-box span {
         text-align: right;
         width: 100%;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 400; }
     .main-container .quote-container .buttons-container {
       display: -webkit-box;
@@ -77,9 +82,8 @@ h1 {
         text-align: center;
         border-radius: 0.5rem;
         border-style: none;
-        color: black; }
+        color: #f5f5f5;
+        background: #0250c5; }
       .main-container .quote-container .buttons-container #tweet i {
-        font-size: 4rem; }
-
-#twitter i {
-  font-size: 5rem; }
+        font-size: 4rem;
+        color: #0250c5; }

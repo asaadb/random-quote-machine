@@ -24,7 +24,7 @@
     alert('Sorry, we are unable to load quote');
   }
   //event listener to get a new quote
-  document.addEventListener('click', () => {
+  changeQuote.addEventListener('click', () => {
     //remove previous quote
     while (quoteBox.hasChildNodes()) {
     quoteBox.removeChild(quoteBox.firstChild);

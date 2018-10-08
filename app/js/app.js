@@ -14,11 +14,12 @@ $(document).ready(() => {
   function addQuote(data) {
     if (data && data[0]) {
       htmlContent = `${data[0].content}<span id="author">${data[0].title}</span>`;
-      $('.quote-box p').prepend('<i class="fas fa-quote-left"></i>');
     } else {
       htmlContent = '<p class="error-no-image">No quotes available. Try again</p>';
     }
     quoteBox.prepend(htmlContent);
+    $('.quote-box p').prepend('<i class="fas fa-quote-left"></i>');
+    $('.quote-box p').append('<i class="fas fa-quote-right"></i>');
   }
 
   function errorFun() {

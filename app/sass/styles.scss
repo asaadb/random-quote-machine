@@ -2,12 +2,12 @@
 
 $main-font: 'Montserrat', sans-serif;
 $header-color: #f5f5f5;
-$descrip-font-size: 1rem;
-$header-font-size: 2rem;
+$descrip-font-size: 1.5rem;
+$header-font-size: 2.5rem;
 $quote-font-size: 1.8rem;
-$author-font-size: 1rem;
+$author-font-size: 1.3rem;
 $author-font-weight: 400;
-$font-color: black;
+$font-color: #313131;
 $buttons-color: #0250c5;
 $background-img: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 
@@ -53,7 +53,7 @@ body {
   }
   .quote-container{
     width:100%;
-    background:#f5f5f5;
+    background:$header-color;
     padding:1.2rem;
     border-radius:0.5rem;
     .quote-box{
@@ -85,23 +85,27 @@ body {
       flex-flow: row;
       justify-content: space-around;
       align-items: center;
-      .newQuote {
-        width:9rem;
+      .button{
         padding:1rem;
-        height:4rem;
+        margin:0;
         font-size: 1rem;
         text-align: center;
-        border-radius: 0.5rem;
+        background-color: $buttons-color;
+        //border-radius: 0.5rem;
         border-style: none;
-        color:#f5f5f5;
-        background: $buttons-color;
+        color:$header-color;
+        border-radius: 50%;
         cursor: pointer;
-      }
-      #tweet {
         i {
-          font-size: 4rem;
-          color: $buttons-color;
+          font-size: 3.8rem;
         }
+      }
+      .button:focus, .button:active {
+        outline:none;
+      }
+      .button:hover {
+        opacity: 0.6;
+        transition: ease-in-out 0.3s;
       }
     }
   }

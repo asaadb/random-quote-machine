@@ -2,7 +2,7 @@
 
 $main-font: 'Montserrat', sans-serif;
 $header-color: 	#00FF7F;
-$quote-box-color: #dcdcdc;
+$quote-box-color: rgba(220,220,220,0.7);
 $descrip-color: #dcdcdc;
 $descrip-font-size: 1.5rem;
 $header-font-size: 3rem;
@@ -10,7 +10,7 @@ $quote-font-size: 1.8rem;
 $author-font-size: 1.3rem;
 $author-font-weight: 400;
 $font-color: #313131;
-$buttons-color: #f5f5f5;
+$buttons-color: #ffffff;
 $background-img: url('../images/snow-1185474_1280.jpg'); // source:https://pixabay.com/en/snow-sunset-hiking-cold-1185474/
 
 html {
@@ -59,7 +59,6 @@ body {
     padding:1.2rem;
     border-radius:0.5rem;
     margin-bottom:1rem;
-    background:rgba(255,255,255,0.7);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     .quote-box{
       margin-bottom:1rem;

@@ -4,23 +4,18 @@
   const changeQuote = document.querySelector('.newQuote');
   //make an API request from quotesondesign.com to get random quotes
   function requestQuote() {
-  const quoteRequest = new XMLHttpRequest();
-  quoteRequest.open('GET', 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1');
-  quoteRequest.onload = addQuote;
-  quoteRequest.onerror = errorFun;
-  quoteRequest.send();
+    $.ajax({
+            url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1'
+        }).done(addQuote)
+        .fail(errorFun);
   }
   requestQuote();
 
-  function addQuote() {
-    let htmlContent;
-    const data = JSON.parse(this.responseText);
-
+  function addQuote(data) {
     if (data && data[0]) {
       htmlContent = `${data[0].content}<span id="author">${data[0].title}</span>`;
-
     } else {
-      htmlContent = '<p class="error-no-image">No images available</p>';
+      htmlContent = '<p class="error-no-image">No quotes available. Try again</p>';
     }
     quoteBox.insertAdjacentHTML('afterbegin', htmlContent);
   }
@@ -34,6 +29,7 @@
     while (quoteBox.hasChildNodes()) {
     quoteBox.removeChild(quoteBox.firstChild);
     }
+    //get new quote
     requestQuote();
     //get tweet button and add an event listener
     const tweetButton = document.getElementById('tweet');

@@ -57,8 +57,6 @@ body {
       line-height: 1.5rem;
       font-size: 1.8rem; }
       .main-container .quote-container .quote-box p {
-        -webkit-transition: ease-in-out 1s;
-        transition: ease-in-out 1s;
         text-align: center;
         width: 100%;
         line-height: 2rem;
